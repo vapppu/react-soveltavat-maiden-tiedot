@@ -1,9 +1,9 @@
 const SearchBar = ({handleChange}) => {
 
     return (
-        <>
-        <span>Search: </span><input onChange={handleChange}></input>
-        </>
+        <section className="searchBar">
+        <span>Find countries: </span><input onChange={handleChange}></input>
+        </section>
     )
 }
 

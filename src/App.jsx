@@ -6,6 +6,8 @@ import SearchBar from "./components/SearchBar";
 import CountryList from "./components/CountryList";
 import CountryData from "./components/CountryData";
 
+
+
 const App = () => {
   const [countryNames, setCountryNames] = useState([]);
   const [foundCountryNames, setFoundCountryNames] = useState([]);
@@ -63,7 +65,7 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className="pageContent">
       <SearchBar handleChange = {updateSearchTerm} />
       
       <CountryList
@@ -73,7 +75,7 @@ const App = () => {
         countryToShow = {countryToShow}
       />
       <CountryData country={countryData} />
-    </>
+    </div>
   );
 };
 
