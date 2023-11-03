@@ -5,3 +5,17 @@ body {
   font-size: 1.6rem;
   background-color: beige;
 }
+.country > ul {
+  list-style: none;
+}
+.country h3 {
+  font-size: inherit;
+}
+.country img,
+.country figure {
+  display: block;
+  max-width: 100%;
+}
+figure {
+  margin: 1rem 0 0 0;
+}
