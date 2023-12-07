@@ -3,26 +3,26 @@ import axios from "axios";
 
 const Weather = ({ capital }) => {
   const [weatherData, setWeatherData] = useState(null);
-  const weather_api_key = import.meta.env.VITE_SOME_KEY;
+  const weather_api_key = 'cfdf200d5fae4f2896a123131230507';
 
-  useEffect(() => 
-  {  
+  useEffect(() => {
     if (capital) {
-    axios
-      .get(
-        `https://api.weatherapi.com/v1/current.json?q=${capital.toLowerCase()}&key=${weather_api_key}
+      axios
+        .get(
+          `https://api.weatherapi.com/v1/current.json?q=${capital.toLowerCase()}&key=${weather_api_key}
         `
-      )
-      .then((result) => {
-        setWeatherData(result.data);
-      })
-      .catch((error) => {
-        setWeatherData(null)
-      })
+        )
+        .then((result) => {
+          setWeatherData(result.data);
+        })
+        .catch((error) => {
+          setWeatherData(null)
+        })
 
-  } else {
-    setWeatherData(null);
-  }}, [])
+    } else {
+      setWeatherData(null);
+    }
+  }, [])
 
   console.log(weatherData)
 
